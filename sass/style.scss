@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,600,700');
+$bgColor: #cbfdfa;
+$primaryColor: #24bebd;
+$defaultColor: #383838;
+$link: #1da6a5;
+$white: #ffffff;
+body{color: $primaryColor;font-family: 'Montserrat', sans-serif;}
+section{padding: 4rem 0;position: relative;}
+ul,li{padding: 0;margin: 0;list-style: none;}
+h1{font-size:3rem;font-weight: 600; color: $defaultColor;}
+h2{color: $primaryColor;font-size: 32px;}
+
+/****** header ********/
+header {
+    background-color: $bgColor;
+    min-width: 100%;
+    min-height: 60px;
+    position: fixed;
+    nav {padding: 0;
+        .navbar-brand {
+            padding: 0;
+            margin: 0;
+            img {
+                max-height: 60px;
+            }
+        }
+        ul {
+            li {
+                padding-right: 1rem;
+                a{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding: 0.5rem 1rem;
+                    &.active{
+                        background-color: $primaryColor;
+                        color:$white;
+                    }
+                }
+            }
+        }
+    }
+}
+/****** footer *****/
+footer{
+    padding: 2rem 0;
+    ul{
+        float: right;
+        li {
+            float: left;
+            margin-left: 0.5rem;
+            min-width: 30px;
+            text-align: center;
+            a {
+                display: block;
+                color: $link;
+                padding:0 0.5rem 0;
+                i{
+                    font-size: 2rem;
+                    color: $link;
+                }
+                &:hover i, &:active i{
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+/**** coverr *****/
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+    &:before{
+
+    }
+}
+.no-video .video-container video,
+.touch .video-container video {display: none;}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    .poster img{
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+    }
+    .filter{z-index: 100;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+    }
+    video{
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        &.fillWidth{
+            width: 100%;
+        }
+    }
+}
+
+/******* home ****/
+.landing{
+    height: 100%;
+    .middeleText{
+        height: 100%;
+        margin-right: -15px;
+        margin-left: -15px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        div {
+            margin: auto;
+            z-index: 9;
+        }
+    }
+}
+.group            {
+    position:relative;
+    margin-bottom:45px;
+}
+input               {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+input:focus         { outline:none; }
+
+/* LABEL ======================================= */
+label                {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label        {
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar    { position:relative; display:block; width:300px; }
+.bar:before, .bar:after     {
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background:#5264AE;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to    { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to    { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to    { width:0; background:transparent; }
+}
+
+
+
+
