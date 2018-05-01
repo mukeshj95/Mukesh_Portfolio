@@ -1,0 +1,22 @@
+{
+  "name": "mukesh_portfolio",
+  "version": "1.0.0",
+  "description": "Mukesh Jaiswal Portfolio",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukeshj95/Mukesh_Portfolio.git"
+  },
+  "author": "Mukesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukeshj95/Mukesh_Portfolio/issues"
+  },
+  "homepage": "https://github.com/mukeshj95/Mukesh_Portfolio#readme"
+}
